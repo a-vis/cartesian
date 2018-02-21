@@ -1,0 +1,43 @@
+{
+  "name": "@a-vis/cartesian",
+  "version": "1.0.0",
+  "description": "Cartesian grid virtual-dom component",
+  "main": "index.js",
+  "scripts": {
+    "test": "budo test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-vis/cartesian.git"
+  },
+  "keywords": [
+    "grid",
+    "cartesian",
+    "replot"
+  ],
+  "author": "Dmitry Yv. <dfcreative@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a-vis/cartesian/issues"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "jsx-transform/browserify",
+        {
+          "factory": "h"
+        }
+      ]
+    ]
+  },
+  "homepage": "https://github.com/a-vis/cartesian#readme",
+  "dependencies": {
+    "enable-mobile": "^1.0.7",
+    "jsx-transform": "^2.3.0",
+    "pick-by-alias": "^1.2.0",
+    "virtual-dom": "^2.1.1"
+  },
+  "devDependencies": {
+    "virtual-hyperscript-svg": "^2.0.0"
+  }
+}
