@@ -1,4 +1,4 @@
-/* @module replot-cartesian */
+/* @module a-vis/cartesian */
 
 'use strict'
 

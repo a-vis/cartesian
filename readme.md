@@ -12,10 +12,11 @@ let el = Cartesian({
 document.body.appendChild(createElement(el))
 ```
 
-## Cartesian(options)
+## `Cartesian(options, children)`
 
 Create svg vnode with cartesian grid based on `options`.
 
+<!--
 ### `options`
 
 Option | Default | Description
@@ -24,21 +25,35 @@ Option | Default | Description
 `axis`, `axes` | `true` | Axis options.
 `label`, `labels` | `true` | Display labels for axes or provide custom label sets
 `tick`, `ticks` | `true` | Display ticks for labels or provide custom tick sets, optionally based on data.
+-->
 
-### `options.line`
+### `Cartesian.lines(options)`
+
+Display regular lines grid in defined dimension.
+
+TODO: image
 
 Option | Default | Description
 ---|---|---
 `values` | `'linear'` | List of stops or a function, returning such list.
 `orientation`, `direction` | `x` | `x`, `y`, `horizontal` or `vertical`
 `color` | `'inherits'` | Line(s) color
-`opacity` | `true` | Line opacity, independent of color
+`opacity` | `1` | Line opacity, independent of color
 `width` | `'1'` | Line width
 `dash` | `null` | Line dash pattern
-`intersect` | `true` | Intersect with other lines. Bool or array with line ids to intersect with.
-`marker` | `null` | Marker to display at intersections. One of `'dot'`, `'cross'`, `'line'`, `'square'` or an svg.
 
-### `options.axis`
+### `Cartesian.intersection(options, lines)`
+
+Display lines intersection grid based on the list of lines components.
+
+TODO: image
+
+`marker` | `'cross'` | Intersection marker: `cross`, `dot`, any character or svg shape.
+`color` | `'inherits'` | Intersection shape stroke color
+`opacity` | `1` | Intersection shape opacity
+`width` | `'1'` | Intersection shape stroke width
+
+### `Cartesian.axis`
 
 Option | Default | Description
 ---|---|---
